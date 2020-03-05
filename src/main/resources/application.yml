@@ -1,0 +1,11 @@
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: hanghang
+    password: 961094037Hang
+    url: jdbc:mysql://rm-bp1krws6w65h95jhd2o.mysql.rds.aliyuncs.com:3306/hanghang?serverTimezone=UTC&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
