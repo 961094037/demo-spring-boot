@@ -28,8 +28,13 @@ public class DemoController {
     @PostMapping("/demo")
     @ApiModelProperty(value = "demo")
     public Pokers demo(@RequestBody List<Poker> list){
-        list = list.stream().sorted(Comparator.comparing(Poker::getValue)).collect(Collectors.toList());
         Pokers pokers = new Pokers(list);
         return pokers;
+    }
+
+    @PostMapping("/max")
+    @ApiModelProperty(value = "max")
+    public Pokers max(@RequestBody List<Poker> list){
+        return dezhouPokerServvice.getMaxPokers(list);
     }
 }

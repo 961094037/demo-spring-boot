@@ -3,7 +3,9 @@ package com.example.demo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 @NoArgsConstructor
@@ -20,7 +22,7 @@ public class Pokers {
     private int five = 0;
 
     public Pokers(List<Poker> pokers){
-        this.pokers = pokers;
+        this.pokers = pokers.stream().sorted(Comparator.comparing(Poker::getValue)).collect(Collectors.toList());
         checkPatterns();
     }
 
@@ -221,35 +223,35 @@ public class Pokers {
     }
 
     /** 对比 */
-    private int compare(Pokers a, Pokers b){
-        if (a.suitPatterns.getValue() > b.suitPatterns.getValue()){
+    public int compare(Pokers b){
+        if (suitPatterns.getValue() > b.suitPatterns.getValue()){
             return 1;
-        }else if (a.suitPatterns.getValue() < b.suitPatterns.getValue()){
+        }else if (suitPatterns.getValue() < b.suitPatterns.getValue()){
             return -1;
         }else {
-            if (a.first > b.first){
+            if (first > b.first){
                 return 1;
-            }else if (a.first < b.first) {
+            }else if (first < b.first) {
                 return -1;
             }else{
-                if (a.second > b.second){
+                if (second > b.second){
                     return 1;
-                }else if (a.second < b.second) {
+                }else if (second < b.second) {
                     return -1;
                 }else{
-                    if (a.thrid > b.thrid){
+                    if (thrid > b.thrid){
                         return 1;
-                    }else if (a.thrid < b.thrid) {
+                    }else if (thrid < b.thrid) {
                         return -1;
                     }else {
-                        if (a.four > b.four){
+                        if (four > b.four){
                             return 1;
-                        }else if (a.four < b.four) {
+                        }else if (four < b.four) {
                             return -1;
                         }else {
-                            if (a.five > b.five){
+                            if (five > b.five){
                                 return 1;
-                            }else if (a.five < b.five) {
+                            }else if (five < b.five) {
                                 return -1;
                             }else {
                                 return 0;
