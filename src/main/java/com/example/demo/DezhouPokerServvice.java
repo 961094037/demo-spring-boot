@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class DezhouPokerServvice {
@@ -30,6 +32,19 @@ public class DezhouPokerServvice {
             }
         }
         return max;
+    }
+
+
+    public ReturnOdds CheckPoker(CheckPoker checkPoker){
+        AtomicInteger allTime = new AtomicInteger(0);
+        AtomicInteger time1 = new AtomicInteger(0);
+        AtomicInteger time2 = new AtomicInteger(0);
+        for (int i = 0; i<10; i++){
+//            Random
+        }
+
+
+        return null;
     }
 
 }

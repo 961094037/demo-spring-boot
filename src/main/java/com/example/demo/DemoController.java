@@ -37,4 +37,12 @@ public class DemoController {
     public Pokers max(@RequestBody List<Poker> list){
         return dezhouPokerServvice.getMaxPokers(list);
     }
+
+    @PostMapping("/odds")
+    @ApiModelProperty(value = "odds")
+    public ReturnOdds checkOdds(@RequestBody CheckPoker checkPoker){
+        return dezhouPokerServvice.CheckPoker(checkPoker);
+    }
+
+
 }
