@@ -21,5 +21,7 @@ public class CheckPoker {
 
     List<Poker> board;
 
+    Integer time;
 
+    Integer threadTime;
 }

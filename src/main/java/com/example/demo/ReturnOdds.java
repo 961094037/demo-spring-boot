@@ -11,4 +11,6 @@ public class ReturnOdds {
     private float odds4;
     private float odds5;
     private float odds6;
+
+    private Long time;
 }
