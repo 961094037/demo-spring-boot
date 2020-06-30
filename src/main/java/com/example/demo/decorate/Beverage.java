@@ -5,7 +5,7 @@ package com.example.demo.decorate;
 */
 public abstract class Beverage {
 
-    protected String  descript = "unKnow beverage";
+    public String  descript = "unKnow beverage";
 
     public String getDescript(){
         return descript;

@@ -5,7 +5,7 @@ package com.example.demo.decorate;
 */
 public abstract class Condiment extends Beverage{
 
-    protected Beverage beverage;
+    public Beverage beverage;
 
     public abstract String getDescript();
 }
