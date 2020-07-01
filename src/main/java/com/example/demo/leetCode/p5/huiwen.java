@@ -14,4 +14,14 @@ public class huiwen {
 
         return s;
     }
+
+    private String checkOne(char[] s, int i){
+
+        return "";
+    }
+
+    private String checkTwo(){
+
+        return "";
+    }
 }
