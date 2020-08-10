@@ -7,7 +7,7 @@ public class huiwen {
     }
 
 
-
+    //计算最长回文字符串
     public static String longestPalindrome(String s) {
         if ("".equals(s) || s.length() == 1){
             return s;
